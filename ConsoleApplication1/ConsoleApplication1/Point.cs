@@ -12,6 +12,13 @@ namespace ConsoleApplication1
         public int y;
         public char sim;
 
+        public Point(int _x, int _y, char _sim)
+        {
+            x = _x;
+            y = _y;
+            sim = _sim;
+        }
+
         public void Drow()
         {
             Console.SetCursorPosition(x, y);

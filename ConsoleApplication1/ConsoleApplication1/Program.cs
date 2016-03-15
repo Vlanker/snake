@@ -10,19 +10,19 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
-            p1.x = 1;
-            p1.y = 3;
-            p1.sim = '*';
+            Point p1 = new Point(1,3,'*');
+            /* p1.x = 1;
+             p1.y = 3;
+             p1.sim = '*';*/
             p1.Drow();
-            /* Drow(p1.x, p1.y, p1.sim);*/
+             /* Drow(p1.x, p1.y, p1.sim);*/
 
-            Point p2 = new Point();
-            p2.x = 4;
-            p2.y = 5;
-            p2.sim = '#';
+            Point p2 = new Point(4,5,'#');
+            /* p2.x = 4;
+             p2.y = 5;
+             p2.sim = '#';*/
             p2.Drow();
-            /* Drow(p2.x, p2.y, p2.sim);*/
+             /* Drow(p2.x, p2.y, p2.sim);*/
 
             /*int x1 = 1;
             int y1 = 3;
