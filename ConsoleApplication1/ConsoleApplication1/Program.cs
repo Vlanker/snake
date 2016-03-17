@@ -11,36 +11,34 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             Point p1 = new Point(1,3,'*');
-            /* p1.x = 1;
-             p1.y = 3;
-             p1.sim = '*';*/
             p1.Drow();
-             /* Drow(p1.x, p1.y, p1.sim);*/
-
+            
             Point p2 = new Point(4,5,'#');
-            /* p2.x = 4;
-             p2.y = 5;
-             p2.sim = '#';*/
             p2.Drow();
-             /* Drow(p2.x, p2.y, p2.sim);*/
 
-            /*int x1 = 1;
-            int y1 = 3;
-            char sim1 = '*';
-            Drow(x1,y1,sim1);
+            List<int> numList = new List<int>();
+            numList.Add(0);
+            numList.Add(1);
+            numList.Add(2);
 
-            int x2 = 4;
-            int y2 = 5;
-            char sim2 = '#';
-            Drow(x2, y2, sim2);*/
+            int x = numList[0];
+            int y = numList[1];
+            int z = numList[2];
+
+            foreach (int i in numList)
+            {
+                Console.WriteLine(i);
+            }
+
+            numList.RemoveAt(0);//удалить 1
+
+            List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
 
             Console.ReadLine();
         }
 
-        /* static void Drow(int x, int y, char sim)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sim);
-        }*/
+      
     }
 }
