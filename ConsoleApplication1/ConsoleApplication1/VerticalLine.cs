@@ -11,11 +11,13 @@ namespace ConsoleApplication1
         public VerticalLine(int x, int yUp, int yDown, char sim)
         {
             pList = new List<Point>();
+
             for (int y = yUp; y <= yDown; y++)
             {
                 Point p = new Point(x, y, sim);
                 pList.Add(p);
             }
+
         }
     }
 }

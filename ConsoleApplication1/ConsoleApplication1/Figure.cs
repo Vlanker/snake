@@ -9,7 +9,7 @@ namespace ConsoleApplication1
     class Figure
     {
         protected List<Point> pList;
-
+        
 
         public void Drow()
         {
