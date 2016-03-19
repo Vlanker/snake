@@ -67,8 +67,6 @@ namespace ConsoleApplication1
             Console.Write(sim);
         }
 
-       
-
         public override string ToString()
         {
             return x + ", " + y + ", " + sim;
