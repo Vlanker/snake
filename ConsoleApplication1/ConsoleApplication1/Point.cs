@@ -19,7 +19,7 @@ namespace ConsoleApplication1
             sim = _sim;
         }
 
-        public void Drow()
+        public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sim);
