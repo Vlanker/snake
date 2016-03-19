@@ -47,6 +47,11 @@ namespace ConsoleApplication1
 
         }
 
+        internal void Clear()
+        {
+            sim = ' ';
+            Draw();
+        }
 
         public void Draw()
         {
