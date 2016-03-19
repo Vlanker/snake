@@ -10,19 +10,20 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            
+            Console.SetBufferSize(120, 30);
             //Отрисовка рамочки
-            Point p1 = new Point(1,3,'*');
-            p1.Draw();
-            
-            Point p2 = new Point(4,5,'#');
-            p2.Draw();
+            HorizontalLine UpLine = new HorizontalLine(0, 119, 0, '+');
+            HorizontalLine DownLine = new HorizontalLine(0, 119, 28, '+');
+            VerticalLine LeftLine = new VerticalLine(0, 0, 28, '+');
+            VerticalLine RightLine = new VerticalLine(119, 0, 28, '+');
+            UpLine.Drow();
+            DownLine.Drow();
+            LeftLine.Drow();
+            RightLine.Drow();
 
-            HorizontalLine Hline = new HorizontalLine(5, 10, 8, '+');
-            Hline.Drow();
-
-            VerticalLine Vline = new VerticalLine(5, 9, 15, '+');
-            Vline.Drow();
+            //Отрисовка точек
+            Point p = new Point(1, 3, '*');
+            p.Draw();
 
             Console.ReadLine();
         }
