@@ -39,5 +39,18 @@ namespace ConsoleApplication1
             nextPoint.Move(1, direction);
             return nextPoint;
         }
+
+        public void HandleKey(ConsoleKey Key)
+        {
+            
+            if (Key == ConsoleKey.LeftArrow)
+                direction = Direction.LEFT;
+            if (Key == ConsoleKey.RightArrow)
+                direction = Direction.RIGHT;
+            if (Key == ConsoleKey.UpArrow)
+                direction = Direction.UP;
+            if (Key == ConsoleKey.DownArrow)
+                direction = Direction.DOWN;
+        }
     }
 }
