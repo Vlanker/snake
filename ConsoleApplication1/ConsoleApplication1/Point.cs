@@ -49,6 +49,12 @@ namespace ConsoleApplication1
 
         }
 
+        public bool IsHit(Point p)
+        {
+            return p.x == x && p.y == y;
+
+        }
+
         internal void Clear()
         {
             sim = ' ';
@@ -68,10 +74,6 @@ namespace ConsoleApplication1
             return x + ", " + y + ", " + sim;
         }
 
-        internal bool IsHot(Point food)
-        {
-            return p.x == this.x && p.y = this.y;
-
-        }
+       
     }
 }

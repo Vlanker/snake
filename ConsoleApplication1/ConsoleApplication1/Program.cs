@@ -28,7 +28,7 @@ namespace ConsoleApplication1
             snake.Drow();
             
             //Еда
-            FoodCreator foodCreator = new FoodCreator(120, 30, '$');
+            FoodCreator foodCreator = new FoodCreator(120, 30, '*');
             Point food = foodCreator.CreateFood();
             food.Draw();
             

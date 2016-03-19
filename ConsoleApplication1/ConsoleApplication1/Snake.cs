@@ -10,9 +10,9 @@ namespace ConsoleApplication1
     {
         Direction direction;
 
-        public Snake(Point tail, int length, Direction _direction)
+        public Snake(Point tail, int length, Direction direction)
         {
-            direction = _direction;
+            this.direction = direction;
             pList = new List<Point>();
             for (int i = 0; i < length; i++)
             {
@@ -56,7 +56,7 @@ namespace ConsoleApplication1
         internal bool Eat(Point food)
         {
             Point head = GetNextPoint();
-            if (head.IsHot(food))
+            if (head.IsHit(food))
             {
                 food.sim = head.sim;
                 pList.Add(food);

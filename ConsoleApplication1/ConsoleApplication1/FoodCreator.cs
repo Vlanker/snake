@@ -15,11 +15,11 @@ namespace ConsoleApplication1
         Random random = new Random();
         
 
-        public FoodCreator(int _mapWidth, int _mapHeight, char _sim)
+        public FoodCreator(int mapWidth, int mapHeight, char sim)
         {
-            this.mapHeight = _mapHeight;
-            this.mapWidth = _mapWidth;
-            this.sim = _sim;
+            this.mapHeight = mapHeight;
+            this.mapWidth = mapWidth;
+            this.sim = sim;
         }
 
         public Point CreateFood()
