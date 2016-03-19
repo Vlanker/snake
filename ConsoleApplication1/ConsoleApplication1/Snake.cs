@@ -52,5 +52,18 @@ namespace ConsoleApplication1
             if (Key == ConsoleKey.DownArrow)
                 direction = Direction.DOWN;
         }
+
+        internal bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+            if (head.IsHot(food))
+            {
+                food.sim = head.sim;
+                pList.Add(food);
+                return true;
+            }
+            else
+                return false;
+        }
     }
 }

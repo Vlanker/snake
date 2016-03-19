@@ -12,11 +12,11 @@ namespace ConsoleApplication1
         public int y;
         public char sim;
 
-        public Point(int _x, int _y, char _sim)
+        public Point(int x, int y, char sim)
         {
-            x = _x;
-            y = _y;
-            sim = _sim;
+            this.x = x;
+            this.y = y;
+            this.sim = sim;
         }
 
         public Point(Point p)
@@ -25,6 +25,8 @@ namespace ConsoleApplication1
             y = p.y;
             sim = p.sim;
         }
+
+      
 
         public void Move(int offset, Direction direction)
         {
@@ -52,16 +54,24 @@ namespace ConsoleApplication1
             sim = ' ';
             Draw();
         }
-
+                
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sim);
         }
 
+       
+
         public override string ToString()
         {
             return x + ", " + y + ", " + sim;
+        }
+
+        internal bool IsHot(Point food)
+        {
+            return p.x == this.x && p.y = this.y;
+
         }
     }
 }
