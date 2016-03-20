@@ -11,7 +11,28 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize(120, 30);
+            VerticalLine vl = new VerticalLine(0, 10, 5, '%');
+            Draw(vl);
+
+            Point p = new Point(4, 5, '*');
+            Figure fSnake = new Snake(p, 4, Direction.RIGHT);
+            Draw(fSnake);
+            Snake snake = (Snake)fSnake;
+
+            HorizontalLine hl = new HorizontalLine(0, 5, 6, '&');
+
+            List<Figure> figures = new List<Figure>();
+            figures.Add(fSnake);
+            figures.Add(vl);
+            figures.Add(hl);
+                    
+
+            foreach (var f in figures)
+            {
+                f.Draw();
+            }
+
+            /* Console.SetBufferSize(120, 30);
             //Отрисовка рамочки
             HorizontalLine UpLine = new HorizontalLine(0, 119, 0, '+');
             HorizontalLine DownLine = new HorizontalLine(0, 119, 28, '+');
@@ -51,11 +72,13 @@ namespace ConsoleApplication1
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
-                }
-            }
+                }*/
+        }
 
-        }        
-
-      
+        static void Draw(Figure figure)
+        {
+            figure.Draw();
+        }
+              
     }
 }
