@@ -52,8 +52,6 @@ namespace ConsoleApplication1
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
                 }
-
-                snake.Move();
             }
 
         }        
