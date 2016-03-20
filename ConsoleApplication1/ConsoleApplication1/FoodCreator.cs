@@ -24,8 +24,8 @@ namespace ConsoleApplication1
 
         public Point CreateFood()
         {
-            int x = random.Next(5, mapWidth - 5);
-            int y = random.Next(5, mapHeight - 5);
+            int x = random.Next(2, mapWidth - 1);
+            int y = random.Next(2, mapHeight - 1);
             return new Point(x, y, sim);
             
         }

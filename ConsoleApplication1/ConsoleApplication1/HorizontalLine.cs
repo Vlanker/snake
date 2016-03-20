@@ -18,14 +18,14 @@ namespace ConsoleApplication1
             }
         }
 
-        public override void Draw()
+        /*public override void Draw()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
 
             base.Draw();
             
             Console.ForegroundColor = ConsoleColor.White;
-         }
+         }*/
 
     }
 }

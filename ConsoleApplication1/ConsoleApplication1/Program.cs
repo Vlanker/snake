@@ -11,42 +11,15 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            VerticalLine vl = new VerticalLine(0, 10, 5, '%');
-            Draw(vl);
+            Console.SetBufferSize(120, 30);
 
-            Point p = new Point(4, 5, '*');
-            Figure fSnake = new Snake(p, 4, Direction.RIGHT);
-            Draw(fSnake);
-            Snake snake = (Snake)fSnake;
-
-            HorizontalLine hl = new HorizontalLine(0, 5, 6, '&');
-
-            List<Figure> figures = new List<Figure>();
-            figures.Add(fSnake);
-            figures.Add(vl);
-            figures.Add(hl);
-                    
-
-            foreach (var f in figures)
-            {
-                f.Draw();
-            }
-
-            /* Console.SetBufferSize(120, 30);
-            //Отрисовка рамочки
-            HorizontalLine UpLine = new HorizontalLine(0, 119, 0, '+');
-            HorizontalLine DownLine = new HorizontalLine(0, 119, 28, '+');
-            VerticalLine LeftLine = new VerticalLine(0, 0, 28, '+');
-            VerticalLine RightLine = new VerticalLine(119, 0, 28, '+');
-            UpLine.Drow();
-            DownLine.Drow();
-            LeftLine.Drow();
-            RightLine.Drow();
+            Walls walls = new Walls(120, 30);
+            walls.Draw();
 
             //Отрисовка точек
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
-            snake.Drow();
+            snake.Draw();
 
             //Еда
             FoodCreator foodCreator = new FoodCreator(120, 30, '*');
@@ -55,6 +28,12 @@ namespace ConsoleApplication1
 
             while (true)
             {
+                //столкновение со стеной или хвостом
+                if (walls.IsHit(snake) || snake.IsHitTail())
+                {
+                    break;
+                }
+                
                 //пожирание
                 if (snake.Eat(food))
                 {
@@ -72,13 +51,10 @@ namespace ConsoleApplication1
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
-                }*/
-        }
-
-        static void Draw(Figure figure)
-        {
-            figure.Draw();
-        }
-              
+                }
+            }
+         }  
+        
+          
     }
-}
+ }
