@@ -32,6 +32,7 @@ namespace ConsoleApplication1
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
                     break;
+
                 }
                 
                 //пожирание
